@@ -1,13 +1,3 @@
-/**
- *@file main.c
- * @brief Testing Program.
- *@author C Team
- *@version 0.1
- *@date May 14, 2026
- *
- *Testing program for background scrollilng
- *
- */
 #include "game.h"
 
 int main(int argc, char *argv[]) {
