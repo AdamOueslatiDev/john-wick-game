@@ -1,14 +1,3 @@
-/**
- *@file game.c
- * @brief Testing Program.
- *@author C Team
- *@version 0.1
- *@date May 14, 2026
- *
- *Testing program for background scrollilng
- *
- */
-
 #include "game.h"
 
 void mouseToLogical(GameContext *ctx, int *mx, int *my) {
@@ -740,7 +729,6 @@ void initPickup(Pickup *pk, SDL_Texture *sheet, int itemType, int worldX,
   } else if (itemType == cfg->itemVest) {
     dw = dh * cfg->itemVestW / cfg->itemRowH;
   } else {
-    /* coin: keep square-ish */
     dw = dh * cfg->itemCoinW / cfg->itemRowH;
   }
   if (dw < 18)
@@ -821,7 +809,7 @@ void initEnemy(Enemy *e, SDL_Renderer *r, GameConfig *cfg, int worldX,
   e->posScreen.y = e->y;
   e->posScreen.w = cfg->collW;
   e->posScreen.h = cfg->collH;
-  /* AI tuning */
+
   e->aggroed = 0;
   e->deAggroTimer = 0;
   e->fleeing = 0;
@@ -1096,7 +1084,6 @@ void afficherEnemy(Enemy *e, SDL_Renderer *r, Camera cam, SDL_Rect vp) {
     bgBar.y = barY;
     bgBar.w = barW;
     bgBar.h = barH;
-    /* dark backdrop */
     SDL_SetRenderDrawColor(r, 20, 20, 20, 220);
     SDL_RenderFillRect(r, &bgBar);
     fillBar.x = barX;
@@ -4349,7 +4336,6 @@ void renderGame(GameContext *ctx) {
     veil.h = ctx->cfg.screenH;
     SDL_SetRenderDrawColor(ctx->renderer, 8, 8, 20, 230);
     SDL_RenderFillRect(ctx->renderer, &veil);
-    /* title */
     rect.x = 0;
     rect.y = 0;
     rect.w = 0;
