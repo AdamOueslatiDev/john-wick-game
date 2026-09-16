@@ -325,7 +325,6 @@ SDL_Texture *loadTexture(SDL_Renderer *r, char *path);
 void updateCamera(Camera *cam, SDL_Rect target, int worldW, int worldH,
                   GameConfig *cfg, int split);
 
-/* player */
 void initPersonnage(Personnage *p, SDL_Renderer *r, GameConfig *cfg, int x,
                     int y, int idx);
 void movePersonnage(Personnage *p, Obstacle obs[], int nb, GameConfig *cfg);
@@ -338,7 +337,6 @@ void afficherPersonnage(Personnage *p, SDL_Renderer *r, Camera cam,
 void getGunBarrelPos(Personnage *p, GameConfig *cfg, int *outX, int *outY);
 void freePersonnage(Personnage *p);
 
-/* projectile */
 void fireProjectile(Projectile projs[], int max, int worldX, int worldY,
                     int facingRight, int isSuper, int fromPlayer,
                     GameConfig *cfg);
@@ -349,13 +347,11 @@ void updateProjectiles(Projectile projs[], int max, Enemy *enemies[], int nbE,
 void renderProjectiles(SDL_Renderer *r, Projectile projs[], int max, Camera cam,
                        SDL_Rect vp);
 
-/* background */
 void loadBackground(Background *b, SDL_Renderer *r, char *path);
 void afficherBackground(Background *b, SDL_Renderer *r, Camera cam, SDL_Rect vp,
                         int worldW, int worldH);
 void freeBackground(Background *b);
 
-/* obstacle et item */
 void initObstacleFromSheet(Obstacle *o, SDL_Texture *sheet, int obsType,
                            int damageRow, int worldX, int worldY, int drawW,
                            int drawH, GameConfig *cfg);
@@ -367,7 +363,6 @@ void afficherPickup(Pickup *pk, SDL_Renderer *r, Camera cam, SDL_Rect vp,
                     GameConfig *cfg);
 int checkPickupCollision(SDL_Rect *playerBox, Pickup pickups[], int nb);
 
-/* enemy */
 void initEnemy(Enemy *e, SDL_Renderer *r, GameConfig *cfg, int worldX,
                int patrolLeft, int patrolRight, int enemyType);
 void updateEnemy(Enemy *e, SDL_Rect playerBoxes[], int nbPlayers,
@@ -379,21 +374,18 @@ void afficherEnemy(Enemy *e, SDL_Renderer *r, Camera cam, SDL_Rect vp);
 void freeEnemy(Enemy *e);
 void getEnemyGunBarrelPos(Enemy *e, GameConfig *cfg, int *outX, int *outY);
 
-/* minimap */
 void initMinimap(Minimap *m, GameConfig *cfg);
 void updateMinimap(Minimap *m, SDL_Rect p1, SDL_Rect p2, int worldW, int worldH,
                    GameConfig *cfg);
 void afficherMinimap(SDL_Renderer *r, Minimap *m, Obstacle obs[], int nbObs,
                      int worldW, int worldH, GameConfig *cfg);
 
-/* HUD */
 void afficherHUD(SDL_Renderer *r, TTF_Font *f, int vie, int maxVie, int shield,
                  int superAmmo, int score, int level, int elapsedSec,
                  GameConfig *cfg, SDL_Rect vp, Minimap *minimap, Obstacle obs[],
                  int nbObs, int worldW, int worldH, SDL_Texture *heartTex,
                  SDL_Texture *heartEmptyTex);
 
-/* level */
 void loadLevel(Level *lv, SDL_Renderer *r, GameConfig *cfg, int lvIdx);
 void updateLevel(Level *lv, SDL_Rect playerBoxes[], int nbPlayers,
                  double playerVy[], int playerVie[], double playerX[],
@@ -404,7 +396,6 @@ void afficherLevel(Level *lv, SDL_Renderer *r, Camera cam, SDL_Rect vp,
                    GameConfig *cfg);
 void freeLevel(Level *lv);
 
-/* enigme 1 */
 void shuffleIndices(ShuffleState *s, int nb);
 int loadQuizBlocks(char *file, QuizBlock blocks[], int max);
 Enigme genererEnigme(QuizBlock blocks[], int nb, ShuffleState *s,
@@ -419,7 +410,6 @@ int resolveEnigme(int choix, Enigme *e, int *score, int *vie, GameConfig *cfg);
 void updateTimerBar(SDL_Renderer *r, int startTime, GameConfig *cfg);
 void libererEnigme(Enigme *e);
 
-/* enigme 2 */
 void playRotozoom(SDL_Renderer *ren, SDL_Texture *tex, GameConfig *cfg);
 void playEnigme2Result(SDL_Renderer *ren, SDL_Texture *bgTex,
                        SDL_Texture *resultTex, GameConfig *cfg);
@@ -432,7 +422,6 @@ void handleEnigme2Mouse(GameContext *ctx, Enigme2 *e2, SDL_Event *ev);
 void updateEnigme2Drag(GameContext *ctx, Enigme2 *e2);
 void freeEnigme2(Enigme2 *e2);
 
-/* menu */
 void initMenu(MenuState *m, SDL_Renderer *r, TTF_Font *f, GameConfig *cfg);
 void handleMenuEvents(GameContext *ctx, SDL_Event *ev);
 void updateMenu(GameContext *ctx);
@@ -443,15 +432,12 @@ void saveScore(char *name, int score);
 void menuButtonCheck(MenuButton *btn, int mx, int my, Mix_Chunk *sfx,
                      int *wasHovered);
 
-/* save-game */
 void saveGameState(GameContext *ctx);
 int loadGameState(GameContext *ctx);
 int hasSavedGame();
 
-/* histoire */
 int loadHistoireText(char *buf, int bufLen);
 
-/* game */
 int initGame(GameContext *ctx, int multiplayer);
 void handleEvents(GameContext *ctx, SDL_Event *ev);
 void updateGame(GameContext *ctx, int dt);
