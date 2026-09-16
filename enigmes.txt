@@ -1,0 +1,59 @@
+QUESTION: Qui a trahi John Wick au Continental ?
+REP1: Marcus
+REP2: Viggo Tarasov
+REP3: Iosef Tarasov
+ANSWER: 2
+
+QUESTION: Quelle est la monnaie utilisee au Continental ?
+REP1: Des dollars
+REP2: Des pieces en or
+REP3: Des billets speciaux
+ANSWER: 2
+
+QUESTION: Avec quel animal John Wick est-il associe ?
+REP1: Un loup
+REP2: Un aigle
+REP3: Un chien
+ANSWER: 3
+
+QUESTION: Quel titre donne-t-on a John Wick dans le milieu ?
+REP1: Le Fantome
+REP2: Baba Yaga
+REP3: L Ombre
+ANSWER: 2
+
+QUESTION: Dans quelle ville se deroule principalement l'action ?
+REP1: Los Angeles
+REP2: Chicago
+REP3: New York
+ANSWER: 3
+
+QUESTION: Pourquoi John Wick sort-il de sa retraite ?
+REP1: Pour de l'argent
+REP2: Pour se venger
+REP3: Pour une mission
+ANSWER: 2
+
+QUESTION: Qui est le chef du Continental ?
+REP1: Winston
+REP2: Viggo
+REP3: Charon
+ANSWER: 1
+
+QUESTION: Quel est le lien entre Iosef et Viggo Tarasov ?
+REP1: Freres
+REP2: Pere et fils
+REP3: Amis
+ANSWER: 2
+
+QUESTION: Qui aide John Wick au debut du film ?
+REP1: Charon
+REP2: Marcus
+REP3: Winston
+ANSWER: 2
+
+QUESTION: Quel objet Iosef vole-t-il a John Wick ?
+REP1: Une montre
+REP2: Une voiture
+REP3: Une arme
+ANSWER: 2
